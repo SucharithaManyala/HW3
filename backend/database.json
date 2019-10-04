@@ -1,0 +1,38 @@
+{
+    "Users":[
+        {        
+        "username":"Donald",
+        "password":"Jan@2019",
+        "details": {
+            "species":"cartoon"
+        }
+        },
+        {
+            "username":"Mickey",
+           "password":"Feb@2019",
+           "details": {
+               "species":"cartoon"
+           }
+        },
+         {
+            "username":"Goofy",
+           "password":"Mar@2019",
+           "details": {
+               "species":"cartoon"
+           }
+        },
+        {
+        "username":"Daisy",
+           "password":"Apr@2019",
+           "details": {
+               "species":"cartoon"
+           }
+        },
+        {
+        "username":"Minnie",
+           "password":"May@2019",
+           "details": {
+               "species":"cartoon"
+           }
+        }]
+}
