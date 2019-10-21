@@ -1,17 +1,20 @@
 var express = require('express');
 var path = require('path');
- var fs = require("fs");
+var fs = require("fs");
 var database = require('./database.json');
 var app = express();
+var bodyParser = require('body-parser')
 app.use(express.static('../public/'));
 app.use(express.static('./'));
-app.use(express.bodyParser());
 app.use(app.router);
+app.use(bodyParser.json())
+var jsonParser = bodyParser.json()
+var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
-app.post('/', function(req, res) {
-	res.sendFile(path.join('../public/index.html'));
+app.post('/', urlencodedParser, function(req, res) {
+	res.sendFile(path.join('../index.html'));
 });
-app.post('/users/', function(req,res) {
+app.post('/users/', jsonParser, function(req,res) {
     var result='Fail';
     for (var i=0; i < database.Users.length; i++)
     {
@@ -21,6 +24,6 @@ app.post('/users/', function(req,res) {
             result='Success';
         }
     }
-    res.send(result);    
+    res.send(result);
 });
 app.listen(8080);
