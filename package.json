@@ -13,6 +13,6 @@
   "author": "SucharithaManyala",
   "license": "ISC",
   "dependencies": {
-    "express": "^3.21.2"
+    "express": "^4.18.2"
   }
 }
